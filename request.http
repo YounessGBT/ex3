@@ -1,0 +1,31 @@
+### Admin Login
+POST http://localhost:3000/api/users/admin-login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "adminpassword"
+}
+
+### Register User
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "password123",
+  "role": "user"
+}
+
+### Create Ticket
+POST http://localhost:3000/api/tickets
+Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
+
+{
+  "title": "Issue with login",
+  "description": "I cannot log in to my account",
+  "status": "open",
+  "userId": 1
+}
